@@ -13,28 +13,24 @@
              <div class="img">
                 <img class="think" src="img/imgthink.svg">
              </div>
-             <div class="form1">
-                <form action="login.htm"> 
+             <div class="container" >
+                <form class="creat_login" action="login.htm" method="post"> 
                     <img class="life" src="img/life.svg">
                     <h3>WELCOME</h3>
-                    <form method="POST">
-                        <div class="input-div">
-                            <div class="textbox">
-                                 <h5>Username</h5>
-                                 <input type="text" class="input" name="username" required value="">
-                            </div>
-                        <div class="input-div">
-                            <div class="textbox">
-                                <h5>Password</h5>
-           		   		        <input type="password" class="input" name="password" required value=""> 
-                            </div>
-                        </div> 
-                        <input type="checkbox">Remember me?<br>
-                        <button type="submit" value="submit">LOG IN</button><br>
-                        
-                        <p class="message">Not resister?<a href="creat.html">Creat an accout</a></p>
-                    </form> 
-                </form>
+                    <div class="textbox">
+                        <h5>Username</h5>
+                        <input type="text" class="input" id="user"  name="username" value="">
+                    </div>
+                    <div class="textbox">
+                        <h5>Password</h5>
+           		   		<input type="password" class="input" id="pass" name="password"  value=""> 
+                    </div>
+                         
+                    <input type="checkbox">Remember me?<br>
+                    <input type="submit" id="button" onclick="check1()" value="LOG IN"><br>
+                    <p class="message">Not resister?<a href="creat.html">Creat an accout</a></p>
+                    
+                </form> 
             </div>
         </div>
     </body>
