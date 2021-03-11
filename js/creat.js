@@ -1,29 +1,54 @@
 
 function check1(){
-    var input = document.getElementsByTagName('input');//Nên set id cho các element sau đó get by ID không nên get theo tag name
-    var user=input[0].value;
-    var pass=input[1].value;
-    var fullname=input[2].value;
-    var date=input[3].value;
-    var email=input[4].value;
-    if(user == ""||user.length<5){//Nên check null hoặc undefined nữa vì đây là 2 TH đặc biệt của js
-        alert("Please fill your username!");
+    var user=document.getElementById("user").value;
+    var user1=document.getElementById("user1");
+    if(user==""||user.length<5){
+        document.getElementById("user1").style.display="block";
         return false;
     }
-    else if(pass == "" || pass.length<6 ){//Hàm includes kiểm tra có 1 trong số các kí tự trong mảng k :D thử xem!
-        alert("Please fill your password!");
-        document.getElementById('username').style.backgroundColor="red";
+    else{
+        document.getElementById("user1").style.display="none";
+    }
+    var pass=document.getElementById("pass").value;
+    var pass1=document.getElementById("pass1");
+    let check = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    if(!pass.match(check)){
+        document.getElementById("pass1").style.display="block";
+        return true;
+    }
+    else{
+        document.getElementById("pass1").style.display="none";
+    }
+    var fullname=document.getElementById("fullname").value;
+    var fullname1=document.getElementById("fullname1");
+    if(fullname==""){
+        document.getElementById("fullname1").style.display="block";
         return false;
     }
-    else if(email == ""){
-        alert("Please fill your email!");//Check email đơn giản e kiểm tra xem email có chứa @ không bằng hàm String includes( Đọc kỹ lại xử lý string VD như tìm kí tự, đảo xâu tách xâu thành mảng, ...)
+    else{
+        document.getElementById("fullname1").style.display="none";
+    }
+    var day=document.getElementById("day").value;
+    var day1=document.getElementById("day1");
+    if(day==""){
+        document.getElementById("day1").style.display="block";
         return false;
     }
-    else {
-        alert("Correct!!!");
-        confirm("Information Your\n"+"Username:"+user+"\n"+"Fullname:"+fullname+"\n"+"Birthday:"+date+"\n"+"Email:"+email+"\n");
+    else{
+        document.getElementById("day1").style.display="none";
+    }
+    var email=document.getElementById("email").value;
+    var str1=email.includes("@gmail.com");
+    var email1=document.getElementById("email1");
+    if(!str1){
+        document.getElementById("email1").style.display="block";
+        return false;
+    }
+    else{
+        document.getElementById("email1").style.display="none";
+    }
+    alert("Information Your\n"+"Username:  "+user+"\n"+"Fullname:  "+fullname+"\n"+"Birthday:  "+day+"\n"+"Email:  "+email+"\n");
 
-    }
 }
 //Yêu cầu lại
 //Làm lại validate mật khẩu kiểm tra có kí tự hay không theo gợi ý của a
