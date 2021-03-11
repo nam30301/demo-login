@@ -8,44 +8,46 @@
         <title>Facebook</title>
     </head>
     <body>
-        <div class="login-page">
-            <div class="img">
-               <img class="think" src="img/imgthink.svg">
-            </div>
-            <div class="container" >
-               <form class="creat_login" action="login.htm" method="post"> 
-                    <img class="life" src="img/life.svg">
-                    <h3>WELCOME</h3>
-                    <div class="textbox">
-                        <h5>Username</h5>
-                        <input type="text"  id="user" name="username" required >
-                        <p id="letter" class="invalid"></p>
-                    </div>
-                    <div class="textbox">
-                        <h5>Password</h5>
-                        <input type="password" id="pass" name="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required >
-                        <p id="pass1" class="invalid"></p>
-                    </div>   
-                    <div class="textbox">
-                        <h5>Fullname</h5>
-                        <input type="text" class="input" name="fulname" required > 
-                    </div>
-                    <div class="textbox">
-                        <h5>Birthday</h5>
-                        <input type="date" class="input" name="birthday" required > 
-                    </div>
-                    <div class="textbox">
-                        <h5>Email-Address</h5>
-                        <input type="email" class="email" name="email" required >
-                        <p id="mail" class="invalid"></p>
-                    </div>  
-                    <input  type="button" id="button" onclick="check1()" value="SIGN UP"><br>
-                    <br>
-                    <p class="message">Alright?<a href="login.htm">Sign In</a></p>
-                
-                </form>
-            </div>
+        <img class="think" src="img/imgthink.svg"/>
+         <div class="container" >
+            <form class="creat_login" action="login.htm" method="post"> 
+                <img class="life" src="img/life.svg">
+                <h3>WELCOME</h3>
+                <div class="textbox">
+                    <h5>Username</h5>
+                    <input type="text" id="user" name="username" value="" required >
+                    <p id="check1" class="valid"></p>
+                    <p id="check1a" class="invalid"></p>
+                    <div id="user1" class="fill">Please fill your username!</div>
+                </div>
+                <div class="textbox">
+                    <h5>Password</h5>
+                    <input type="password" id="pass" name="password" value="" required >
+                    <p id="check2" class="valid"></p>
+                    <p id="check2a" class="invalid"></p>
+                    <div id="pass1" class="fill">Please fill your password!</div>
+                </div>   
+                <div class="textbox">
+                    <h5>Fullname</h5>
+                    <input type="text" id="fullname" class="input" name="fulname" value="" required > 
+                    <div id="fullname1" class="fill">Please fill your name!</div>
+                </div>
+                <div class="textbox">
+                    <h5>Birthday</h5>
+                    <input type="date" id="day" class="input" name="birthday" value="" required >
+                    <div id="day1" class="fill">Please fill your birthday!</div> 
+                </div>
+                <div class="textbox">
+                    <h5>Email-Address</h5>
+                    <input type="email" id ="email" class="email" name="email" value="" required >
+                    <p id="check3" class="valid"></p>
+                    <p id="check3a" class="invalid"></p>
+                    <div id="email1" class="fill">Please fill your email!</div>
+                </div>  
+                <input  type="button" id="button" onclick="check1()" value="SIGN UP"><br>
+                <br>
+                <p class="message">Alright?<a href="login.htm">Sign In</a></p>
+            </form>
         </div>
     </body>
-
 </html>
